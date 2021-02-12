@@ -1,0 +1,17 @@
+@import "../../sass/flex";
+
+.left {
+  @include flex(null, flex-start, center);
+  padding: 15px;
+}
+.GenrePadding {
+  padding: 20px 10px;
+}
+
+.center {
+  @include flex(null, center, center);
+}
+
+.row.GenrePadding > .col-md-2 {
+  margin: 10px 20px;
+}

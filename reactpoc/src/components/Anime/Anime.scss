@@ -1,0 +1,48 @@
+@import "../../sass/flex";
+
+.animeDetail {
+  @include flex(column, null, flex-end);
+}
+.detailsDiv {
+  min-height: 100%;
+  min-width: 40%;
+  background: linear-gradient(
+    -93deg,
+    rgba(145, 147, 148, 1),
+    rgba(145, 147, 148, 0.8),
+    rgba(145, 147, 148, 0)
+  );
+}
+.detailsDiv > div {
+  height: 75%;
+  padding: 10px;
+}
+.detailsDiv > div > * {
+  margin: 10px;
+  color: ghostwhite;
+  font-family: cursive;
+}
+.post {
+  padding: 0 10px;
+}
+.episode-slider{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.description{
+  max-height: 115px;
+  overflow: hidden;
+}
+
+iframe{
+  display:none;
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  z-index: 2;
+  
+  padding: 0;
+  }
