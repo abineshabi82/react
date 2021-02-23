@@ -1,0 +1,130 @@
+@import "../../sass/flex";
+
+.row > .col-md-2 {
+  margin: 3px 15px;
+  border-radius: 15px;
+  box-shadow: 6px 6px 10px -3px black;
+}
+
+.row > .col-md-2:hover,
+.row > .col-md-2:focus {
+  animation: scale 0.1s forwards linear;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.padding {
+  padding: 15px 30px;
+  padding-top: 2px;
+}
+.arrowPadding {
+  max-width: 100px;
+}
+
+.header {
+  font-family: monospace;
+  padding: 15px 0px 0px 20px;
+  font-size: 1.7rem;
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
+}
+
+.title {
+  @include flex(column, flex-end, center);
+  height: 100%;
+  width: 100%;
+  color: antiquewhite;
+  font-family: monospace;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.9248074229691877) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  position: absolute;
+  top: 0;
+  border-radius: 15px;
+  left: 0;
+  h5 {
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 0.7rem;
+    }
+  }
+  h6 {
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 0.6rem;
+    }
+  }
+}
+.title:hover {
+  background: none;
+}
+
+.carousel-item {
+  display: block;
+}
+
+.genre-slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  margin-right: 1px;
+  @media (max-width: 768px) {
+    overflow: auto;
+  }
+}
+.genre-slider::after {
+  content: "";
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+.left-arrow {
+  position: absolute;
+  @include flex(null, null, center);
+  padding: 10px 0px;
+  width: 4%;
+  height: 85%;
+  z-index: 1;
+  left: 0px;
+}
+.right-arrow {
+  position: absolute;
+  @include flex(null, null, center);
+  width: 4%;
+  height: 85%;
+  z-index: 1;
+  right: 0px;
+  padding: 10px 0px;
+}
+.bi {
+  font-size: 70px;
+  color: white;
+  opacity: 0.8;
+}
+.col-md-2 {
+  padding: 0;
+}
+
+.col-md-2 > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}

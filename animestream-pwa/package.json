@@ -1,0 +1,43 @@
+{
+  "name": "parigonaw.github",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "^7.12.13",
+    "@fortawesome/fontawesome-free": "5.15.2",
+    "axios": "0.21.1",
+    "bootstrap": "4.6.0",
+    "bootstrap-icons": "1.3.0",
+    "fibers": ">= 3.1.0",
+    "jquery": "3.5.1",
+    "node-sass": "4.14.1",
+    "popper.js": "1.16.1",
+    "react": "17.0.1",
+    "react-bootstrap": "1.4.3",
+    "react-dom": "17.0.1",
+    "react-router-dom": "5.2.0",
+    "sass": "^1.3.0",
+    "sass-loader": "^11.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-scripts": "latest"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/png" href="./images/anime.png" />
+	<link rel="apple-touch-icon" href="./images/anime.png" />
+	<link rel="shortcut icon" type="favicon.ico" href="./images/anime.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="anime stream app" />
+	<title>Anime Stream</title>
+	<link rel="manifest" href="./manifest.json"/>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css"
+		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />-->
+</head>
+
+<body>
+	<div id="root"></div>
+	<!--<script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+
+	<script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js" crossorigin></script>
+
+	<script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin></script>
+
+	<script>
+		var Alert = ReactBootstrap.Alert;
+	</script> -->
+	<script>
+		if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./serviceworker.js")
+            .then(reg => console.log("success : ", reg.scope))
+            .catch(err => console.log("error : ", err));
+        });
+      }
+	</script>
+</body>
+
+</html>
