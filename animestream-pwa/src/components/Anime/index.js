@@ -17,6 +17,8 @@ export default function Anime({ match }) {
       }
     });
     document.querySelectorAll(".nav-item")[2].classList.add("active");
+
+    
   }, []);
   useEffect(() => {
     setAnimeId(match.params.animeId);
@@ -69,6 +71,13 @@ export default function Anime({ match }) {
       videoSpan.style.display = "none";
       e.stopPropagation();
     });
+  };
+
+  const moveRight=()=>{
+      document.querySelector(".episode-slider").scrollLeft+=500;
+  };
+  const moveLeft=()=>{
+    document.querySelector(".episode-slider").scrollLeft-=500;
   };
 
   return (
@@ -152,7 +161,7 @@ export default function Anime({ match }) {
         >
           <span
             className="carousel-control-prev-icon  d-none d-sm-none d-md-flex d-lg-flex d-xl-flex"
-            aria-hidden="true"
+            aria-hidden="true" onClick={()=>moveLeft()} tabIndex="0"  onKeyDown={(e)=>{e.key=="Enter"&&moveLeft()}}
           />
           <span className="sr-only">Previous</span>
         </a>
@@ -162,7 +171,7 @@ export default function Anime({ match }) {
           role="button"
           data-slide="next"
         >
-          <span className="carousel-control-next-icon" aria-hidden="true" />
+          <span className="carousel-control-next-icon d-none d-sm-none d-md-flex d-lg-flex d-xl-flex" tabIndex="0" onClick={()=>moveRight()} onKeyDown={(e)=>{e.key=="Enter"&&moveRight()}} aria-hidden="true" />
           <span className="sr-only">Next</span>
         </a>
       </div>

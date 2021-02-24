@@ -28,6 +28,10 @@
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  scroll-behavior: smooth;
+  @media (min-width: 768px) {
+    overflow-x: hidden;
+  }
 }
 .description {
   max-height: 115px;
