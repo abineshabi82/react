@@ -1,0 +1,26 @@
+.registerDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    form{
+        width: 45%;
+        flex-direction: column;
+        display: flex;
+        padding: 10vh 5vw;
+        box-shadow: 2px 3px 5px 0px;
+        margin: 10px;
+        &:hover{
+            box-shadow: 2px 3px 10px 0px;
+        }
+    }
+    .form-element{
+        display: contents;
+        h4{
+            text-align: center;
+        }
+    }
+    input{
+        display: block;
+        margin-bottom: 10px;
+    }
+}
